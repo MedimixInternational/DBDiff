@@ -3,7 +3,6 @@
 
 use DBDiff\SQLGen\SQLGenInterface;
 
-require_once(dirname(__FILE__) . "/../../../../../../../../PROD2/onlinetools/mmx_shared_library/functions/functions.php");
 class AddTableSQL implements SQLGenInterface {
 
     function __construct($obj) {

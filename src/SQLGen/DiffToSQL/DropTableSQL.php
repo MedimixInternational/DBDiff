@@ -11,7 +11,7 @@ class DropTableSQL implements SQLGenInterface {
     
     public function getUp() {
         $table = $this->obj->table;
-        return "DROP TABLE `$table`;";
+        //return "DROP TABLE `$table`;";
     }
 
     public function getDown() {

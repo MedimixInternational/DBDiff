@@ -1,10 +1,9 @@
 #!/usr/bin/env php
 <?php
-
 require_once dirname(__FILE__) .
     "/../../../../../PROD2/onlinetools/mmx_shared_library/functions/functions.php";
-require 'vendor/autoload.php';
 
+require_once dirname(__FILE__) . '/../../autoload.php';
 
-$dbdiff = new DBDiff\DBDiff;
+$dbdiff = new DBDiff\DBDiff();
 $dbdiff->run();

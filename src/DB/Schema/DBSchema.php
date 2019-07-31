@@ -27,7 +27,7 @@ class DBSchema {
         $diffs[] = new SetDBCollation($dbName, 'utf8_unicode_ci', 'utf8_unicode_ci');
 
         // Charset
-        $sourceCharset = $this->getDBVariable('source', 'character_set_database');
+        $sourceCharset = "utf8";
         $targetCharset = $this->getDBVariable('target', 'character_set_database');
         if ($sourceCharset !== $targetCharset) {
             $diffs[] = new SetDBCharset($dbName, $sourceCharset, $targetCharset);
@@ -57,7 +57,7 @@ class DBSchema {
 
         $deletedTables = array_diff($targetTables, $sourceTables);
         foreach ($deletedTables as $table) {
-            $diffs[] = new DropTable($table, $this->manager->getDB('target'));
+            //$diffs[] = new DropTable($table, $this->manager->getDB('target'));
         }
 
         return $diffs;

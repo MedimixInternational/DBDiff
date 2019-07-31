@@ -20,7 +20,7 @@ class SQLGenerator implements SQLGenInterface {
 
     public function getDown() {
         Logger::info("Now generating DOWN migration");
-        $diff = $this->diffSorter->sort($this->diff, 'down');
-        return MigrationGenerator::generate($diff, 'getDown');
+        //$diff = $this->diffSorter->sort($this->diff, 'down');
+        //return MigrationGenerator::generate($diff, 'getDown');
     }
 }

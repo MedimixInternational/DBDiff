@@ -63,11 +63,11 @@ class AddTableSQL implements SQLGenInterface {
                         break;                     
                 }
                 
-                if ($column_length<5000 & $column_length !== null & $column_length !== 0){
+                if ($host !== "173.236.134.74" & $column_length<5000 & $column_length !== null & $column_length !== 0){
                     if (count($lines_columns)==$i+1){
                         $lines_columns[$i] = str_replace(" text", " varchar(".$column_length.")",$line);
                     }
-                    else{
+                    elseif($table !=="lms_tokens_19471"){
                         $lines_columns[$i] = str_replace(" text", " varchar(".$column_length.")", $line).",";
                     }
 

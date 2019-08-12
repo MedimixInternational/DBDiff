@@ -1,9 +1,0 @@
-language: php
-sudo: enabled
-dist: trusty
-php:
-  - '7.1'
-install:
-  composer install
-services:
-  - mysql
